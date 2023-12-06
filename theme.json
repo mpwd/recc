@@ -1,0 +1,106 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "blocks": {
+      "core/preformatted": {
+        "typography": {
+          "fontSizes": [],
+          "customFontSize": false
+        }
+      }
+    },
+    "color": {
+      "defaultPalette": false,
+      "custom": false,
+      "palette": [
+        { "slug": "recc-primary", "color": "#2E5568", "name": "RECC Primary" },
+        {
+          "slug": "recc-secondary",
+          "color": "#E5D2B9",
+          "name": "RECC Secondary"
+        },
+        { "slug": "recc-white", "color": "#FFF", "name": "RECC White" },
+        { "slug": "recc-black", "color": "#2B2D31", "name": "RECC Black" }
+      ]
+    },
+    "layout": {
+      "contentSize": "886px",
+      "wideSize": "100vw"
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "units": ["px", "em", "rem", "vh", "vw", "%"],
+      "blockGap": true
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "Signika, sans-serif",
+          "slug": "signika",
+          "name": "Signika"
+        },
+        {
+          "fontFamily": "Signika Negative, sans-serif",
+          "slug": "signika-negative",
+          "name": "Signika Negative"
+        },
+        {
+          "fontFamily": "Lusitana, serif",
+          "slug": "lusitana",
+          "name": "Lusitana"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small", "size": "1rem", "name": "Small" },
+        { "slug": "medium", "size": "1.125rem", "name": "Medium" },
+        { "slug": "large", "size": "1.25", "name": "Large" },
+        { "slug": "x-large", "size": "1.5rem", "name": "Extra Large" },
+        { "slug": "2-xl", "size": "1.875rem", "name": "2-XL" },
+        { "slug": "3-xl", "size": "3.75rem", "name": "3-XL" }
+      ],
+      "lineHeight": true,
+      "fontWeight": true,
+      "textTransform": true,
+      "letterSpacing": true,
+      "textDecoration": true
+    }
+  },
+  "styles": {
+    "blocks": {
+      "core/button": {
+        "color": {
+          "background": "var(--wp--preset--color--recc-primary)"
+        },
+        "border": { "radius": "0px" }
+      }
+    },
+    "color": {},
+    "elements": {},
+    "spacing": {
+      "margin": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+      },
+      "padding": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+      },
+      "blockGap": "4rem"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--signika)",
+      "fontSize": "16px",
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "lineHeight": "inherit",
+      "textDecoration": "none",
+      "textTransform": "none"
+    }
+  }
+}
