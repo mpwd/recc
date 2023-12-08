@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --black: rgb(43 45 49);
+    --primary: rgb(22, 38, 45);
+    --secondary: rgb(229, 210, 185);
+
+    --serif: 'Lusitana', serif;
+    --sans-serif: 'Signika', sans-serif;
+    --sans-negative: 'Signika Negative', sans-serif;
+
+    font-family: var(--sans-serif);
+    color: var(--black);
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-family: var(--serif);
+  font-size: 1.875rem;
+}
+
+p {
+  font-weight: 300;
+  line-height: 145%;
+  font-size: 1.25rem;
+  margin-block: 1rem;
+}
