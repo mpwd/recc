@@ -73,9 +73,9 @@
             $serviceColor = get_field('liturgical_color');
             $youtubeLink = get_field('youtube_link');
     ?>
-            <section class="mx-[5vw] md:mx-auto my-20 text-center md:text-left max-w-5xl md:grid md:grid-cols-2 gap-[6%]">
-                <div class="mx-auto min-h-[234px] max-w-xs md:max-w-none">
-                    <iframe src="<? echo $youtubeLink; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <section class="mx-[5vw] md:mx-auto my-20 text-center md:text-left max-w-5xl md:grid md:grid-cols-2 items-center gap-[6%]">
+                <div class="mx-auto">
+                    <iframe class="mx-auto" width="350" height="235" src="<? echo $youtubeLink; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="mx-auto max-w-xs md:max-w-none">
                     <h2 class="mb-5">

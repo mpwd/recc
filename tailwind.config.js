@@ -6,6 +6,7 @@ module.exports = {
     'flex-col',
     'flex-row',
     'flex-col-reverse',
+    'flex-grow-lg',
     'items-center',
     'justify-center',
     'slider-link',
@@ -35,6 +36,8 @@ module.exports = {
       colors: {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
+        opaqueSecondary: 'var(--opaque-secondary)',
+        button: 'var(--button)',
       },
     },
     fontFamily: {
