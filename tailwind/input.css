@@ -128,9 +128,10 @@
 }
 
 .homepage-columns {
-  margin-inline: 5vw;
+  margin-inline: auto;
   padding-block: 6rem;
   @media (max-width: 782px) {
+    margin-inline: 5vw;
     justify-content: center;
     text-align: center;
     flex-direction: column;

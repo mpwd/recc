@@ -32,6 +32,7 @@ module.exports = {
     'w-40',
     'max-[782px]:justify-center',
     'max-w-[259px]',
+    'max-w-7xl',
     '[&_a]:bg-primary',
     '[&_a]:body-link',
   ],
