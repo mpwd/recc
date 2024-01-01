@@ -2,6 +2,8 @@
 module.exports = {
   content: ['./*.{html,js,php}'],
   safelist: [
+    'absolute',
+    'body-link',
     'flex',
     'flex-col',
     'flex-row',
@@ -12,6 +14,7 @@ module.exports = {
     'slider-link',
     'gap-8',
     'gap-10',
+    'mb-0',
     'mb-4',
     'mb-12',
     'bg-transparent',
@@ -25,6 +28,7 @@ module.exports = {
     'farmers-market',
     'other-churches',
     'homepage-columns',
+    'staff-pic',
     'w-40',
     'max-[782px]:justify-center',
     'max-w-[259px]',

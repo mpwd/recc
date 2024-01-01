@@ -31,8 +31,8 @@
                         rgba(0, 0, 0, 0.5)), 
                         url('<?php the_post_thumbnail_url(); ?>');">
                     <? endif ?>
-                    <div class="mx-auto px-4 py-10 max-w-5xl md:[&_h5]:mx-10">
-                        <h1><? the_title(); ?></h1>
+                    <div class="mx-auto px-4 py-10 max-w-5xl md:[&_h5]:mx-auto">
+                        <h1 class="mb-4"><? the_title(); ?></h1>
                         <? the_content(); ?>
                     </div>
                     </div>

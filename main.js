@@ -8,18 +8,18 @@ const closeNavButton = document.getElementById('close-nav-button');
 
 if (hamburger) {
   hamburger.addEventListener('click', () => {
-    nav.classList.toggle('hidden');
-    header.classList.toggle('px-[5vw]');
+    nav.classList.toggle('right-full');
   });
 }
 if (closeNavButton) {
-  nav.addEventListener('click', () => {
-    nav.classList.toggle('hidden');
-    header.classList.toggle('px-[5vw]');
+  closeNavButton.addEventListener('click', () => {
+    nav.classList.toggle('right-full');
   });
 }
 
+////////////////////////////////
 //////////// SLIDER ////////////
+////////////////////////////////
 const slider = document.getElementById('slider');
 const slides = Array.from(document.querySelectorAll('.slide'));
 const slideForward = document.getElementById('slide-forward');
@@ -94,4 +94,56 @@ if (slider) {
   slideForward.addEventListener('click', () => slide('next'));
 
   initDots();
+}
+
+//////////////////////////////////////////
+////////////// STAFF BIOS ////////////////
+//////////////////////////////////////////
+const staffArray = document.querySelectorAll('.staff-column');
+const modals = document.querySelectorAll('.modal');
+const closeBtns = document.querySelectorAll('.close-button');
+
+modals.forEach((modal) =>
+  modal.addEventListener('click', function (event) {
+    var rect = modal.getBoundingClientRect();
+    var isInDialog =
+      rect.top <= event.clientY &&
+      event.clientY <= rect.top + rect.height &&
+      rect.left <= event.clientX &&
+      event.clientX <= rect.left + rect.width;
+    var closeBtn = modal.children[0];
+    if (!isInDialog || event.target == closeBtn) {
+      modal.close();
+    }
+  })
+);
+
+staffArray.forEach((el, i) =>
+  el.addEventListener('click', () => {
+    modals[i].showModal();
+  })
+);
+closeBtns.forEach((btn) => btn.addEventListener('click', () => {}));
+
+//////////////////////////////////////////////////////////////////
+//////////////////  FARMERS MARKET SLIDER  ///////////////////////
+//////////////////////////////////////////////////////////////////
+if (window.location.pathname == '/our-community/farmers-market/') {
+  const mainImg = document.querySelector('#carousel-image');
+  setTimeout(() => {
+    const thumbnails = Array.from(
+      document.querySelectorAll('[data-swiper-slide-index]')
+    );
+    for (let i = 0; i < thumbnails.length / 3; i++) {
+      console.log(thumbnails[i].children[0].children[0].href);
+    }
+  }, 2000);
+  // mainImg.src = thumbnails[0].children[0].src;
+  // const urls = thumbnails.map((figure) => figure.children[0].src);
+  // thumbnails.forEach((el) => {
+  //   el.addEventListener('click', (e) => {
+  //     mainImg.src = e.target.src;
+  //   });
+  // el.classList.add('size-thumbnail');
+  // });
 }

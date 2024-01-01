@@ -24,6 +24,10 @@
   }
 }
 
+.nav-hover:hover ul {
+  display: block;
+}
+
 @layer utilities {
   .slider-link a {
     color: white !important;
@@ -155,9 +159,29 @@
   height: 100%;
 }
 
+.staff-columns figure,
+h4,
+h5 {
+  max-width: 422px;
+  margin-inline: auto;
+}
+
+.staff-info {
+  display: grid;
+  grid-template-columns: 1fr 50px 40px;
+  margin-bottom: 0;
+}
+
+.staff-info a > img {
+  display: inline;
+}
+
 h1 {
-  font-size: 2.25rem;
+  font-size: 3.75rem;
   font-family: var(--serif);
+  @media (max-width: 782px) {
+    font-size: 2.25rem;
+  }
 }
 
 h2 {
@@ -181,8 +205,8 @@ h4 {
 }
 
 h5 {
-  font-size: 1.5rem;
-  margin-block: 1rem;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -200,4 +224,8 @@ p {
 
 .page-numbers.current {
   border-bottom: solid 2px var(--secondary);
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.3);
 }
