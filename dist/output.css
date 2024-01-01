@@ -1085,22 +1085,6 @@ video {
   line-height: 1.25;
 }
 
-.leading-none {
-  line-height: 1;
-}
-
-.leading-6 {
-  line-height: 1.5rem;
-}
-
-.leading-7 {
-  line-height: 1.75rem;
-}
-
-.leading-snug {
-  line-height: 1.375;
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1220,9 +1204,11 @@ video {
 }
 
 .homepage-columns {
-  margin-inline: 5vw;
+  margin-inline: auto;
   padding-block: 6rem;
   @media (max-width: 782px) {
+    margin-inline: 5vw;
+
     justify-content: center;
 
     text-align: center;
