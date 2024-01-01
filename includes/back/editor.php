@@ -23,8 +23,8 @@ function my_editor_content($content, $post)
     return $content;
 }
 
-// function ignoreFiles($exclude_filters)
-// {
-//     $exclude_filters[] = 'themes/recc/node_modules';
-//     return $exclude_filters;
-// }
+function ignoreFiles($exclude_filters)
+{
+    $exclude_filters[] = 'themes/recc/node_modules';
+    return $exclude_filters;
+}

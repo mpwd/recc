@@ -17,4 +17,4 @@ add_action('pre_get_posts', 'recc_adjust_queries');
 add_post_type_support('page', 'excerpt');
 
 add_filter('default_content', 'my_editor_content', 10, 2);
-// add_filter('ai1wm_exclude_content_from_export', 'ignoreFiles');
+add_filter('ai1wm_exclude_content_from_export', 'ignoreFiles');
