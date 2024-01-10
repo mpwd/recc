@@ -119,7 +119,10 @@ modals.forEach((modal) =>
 );
 
 staffArray.forEach((el, i) =>
-  el.addEventListener('click', () => {
+  el.addEventListener('click', (e) => {
+    if (e.target.closest('a')) {
+      return;
+    }
     modals[i].showModal();
   })
 );

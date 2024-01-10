@@ -31,7 +31,7 @@
                         rgba(0, 0, 0, 0.5)), 
                         url('<?php the_post_thumbnail_url(); ?>');">
                     <? endif ?>
-                    <div class="mx-auto px-4 py-10 max-w-5xl md:[&_h5]:mx-auto">
+                    <div class="mx-auto px-4 py-10 max-w-5xl md:[&_h5]:mx-auto md:[&_h5]:max-w-4xl">
                         <h1 class="mb-4"><? the_title(); ?></h1>
                         <? the_content(); ?>
                     </div>
@@ -53,7 +53,7 @@
     the_post();
 ?>
     <!-- BANNER - Get Directions -->
-    <div class="bg-secondary py-2 text-center [&_p]:inline [&_p]:text-base [&_p]:md:text-xl [&_a]:underline [&_a]:decoration-1"><? the_excerpt(); ?> </div>
+    <div class="bg-secondary py-4 text-center [&_p]:inline [&_p]:text-base [&_p]:md:text-xl [&_a]:underline [&_a]:decoration-1"><? the_excerpt(); ?> </div>
 
     <!-- MOST RECENT SERVICE -->
     <?php
@@ -73,9 +73,9 @@
             $serviceColor = get_field('liturgical_color');
             $youtubeLink = get_field('youtube_link');
     ?>
-            <section class="mx-[5vw] md:mx-auto my-20 text-center md:text-left max-w-5xl md:grid md:grid-cols-2 items-center gap-[6%]">
-                <div class="mx-auto">
-                    <iframe class="mx-auto" width="350" height="235" src="<? echo $youtubeLink; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <section class="mx-[5vw] md:mx-auto md:px-4 mt-20 md:mt-40 text-center md:text-left max-w-7xl flex flex-col md:flex-row items-center gap-[6%]">
+                <div class="mx-auto homepage-service-thumbnail pb-7 md:pb-0">
+                    <iframe class="mx-auto" src="<? echo $youtubeLink; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="mx-auto max-w-xs md:max-w-none">
                     <h2 class="mb-5">
@@ -84,7 +84,7 @@
                         </svg>
                         <a href="<?php echo the_permalink(); ?>" class="align-middle"><?php the_title(); ?></a>
                     </h2>
-                    <p class="">
+                    <!-- <p class="">
                         <svg class="inline mr-1" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
                             <path d="M18.5 1H16V0.5C16 0.22 15.78 0 15.5 0C15.22 0 15 0.22 15 0.5V1H5V0.5C5 0.22 4.78 0 4.5 0C4.22 0 4 0.22 4 0.5V1H1.5C0.67 1 0 1.67 0 2.5V16.5C0 17.33 0.67 18 1.5 18H18.5C19.33 18 20 17.33 20 16.5V2.5C20 1.67 19.33 1 18.5 1ZM1.5 2H4V3.5C4 3.78 4.22 4 4.5 4C4.78 4 5 3.78 5 3.5V2H15V3.5C15 3.78 15.22 4 15.5 4C15.78 4 16 3.78 16 3.5V2H18.5C18.78 2 19 2.22 19 2.5V5H1V2.5C1 2.22 1.22 2 1.5 2ZM18.5 17H1.5C1.22 17 1 16.78 1 16.5V6H19V16.5C19 16.78 18.78 17 18.5 17Z" fill="#2E5568" />
                             <path d="M15.5 10H4.5C4.22 10 4 9.78 4 9.5C4 9.22 4.22 9 4.5 9H15.5C15.78 9 16 9.22 16 9.5C16 9.78 15.78 10 15.5 10Z" fill="#2E5568" />
@@ -94,16 +94,16 @@
                         <span class="align-middle">
                             <?php echo $serviceDate->format('l, F jS'); ?>
                         </span>
-                    </p>
-                    <p class="mx-auto">
+                    </p> -->
+                    <p class="mx-auto max-w-lg">
                         <?php if (has_excerpt()) {
-                            echo wp_trim_words(get_the_excerpt(), 21);
+                            echo wp_trim_words(get_the_excerpt(), 24);
                         } else {
-                            echo wp_trim_words(get_the_content(), 21);
+                            echo wp_trim_words(get_the_content(), 24);
                         }  ?>
                     </p>
                     <div class="flex flex-col md:flex-row items-center gap-6">
-                        <a class="text-xl text-white bg-primary py-4 px-10" href="<?php echo $bulletinLink ?>" target="_blank">View bulletin</a>
+                        <a class="text-xl text-white bg-button py-4 px-10" href="<?php echo $bulletinLink ?>" target="_blank">View bulletin</a>
                         <a class="text-xl body-link" href="<?php echo $bulletinLink ?>" target="_blank">View worship archives</a>
                     </div>
                 </div>
@@ -115,13 +115,10 @@
     wp_reset_postdata();
     ?>
     <!----------- MAIN ------------>
-    <main class="w-screen my-20 lg:my-32">
+    <main class="w-screen mb-20 lg:my-32">
         <?php the_content(); ?>
     </main>
 <?
 }
 
 get_footer();
-
-// [&_a]:bg-primary
-// slider-link is-style-outline

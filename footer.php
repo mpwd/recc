@@ -5,7 +5,7 @@ $todaysYear = date('Y');
 <footer class="bg-primary text-white px-[10vw] py-8">
     <div class="lg:grid grid-flow-col auto-cols-auto">
         <div class="footer--contact">
-            <h2 class="mt-10 mb-8">Contact Us</h2>
+            <h2 class="mt-16 mb-6">Contact Us</h2>
             <ul class="text-xl">
                 <li class="flex gap-4 my-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -35,34 +35,34 @@ $todaysYear = date('Y');
             </ul>
         </div>
         <div class="footer--links">
-            <h2 class="mt-10 mb-8">
+            <h2 class="mt-16 mb-6">
                 Links
             </h2>
             <ul class="text-xl">
                 <li class="my-4">
-                    <a href="#">What we believe</a>
+                    <a href="<?php echo site_url('/about-us'); ?>">What we believe</a>
                 </li>
                 <li class="my-4">
-                    <a href="#">Church events</a>
+                    <a href="<?php echo site_url('/events'); ?>">Church events</a>
                 </li>
                 <li class="my-4">
-                    <a href="#">Our denomination</a>
+                    <a href="https://covchurch.org/" target="_blank">Our denomination</a>
                 </li>
                 <li class="my-4">
-                    <a href="#">ECC Central Conference</a>
+                    <a href="https://centralconf.org/" target="_blank">ECC Central Conference</a>
                 </li>
             </ul>
         </div>
         <div class="footer--socials">
-            <h2 class="mt-10 mb-8">Social media</h2>
+            <h2 class="mt-16 mb-6">Social media</h2>
             <ul class="flex gap-6">
                 <li>
-                    <a href="https://www.facebook.com/ravenscov/">
-                        <img src="<?php echo get_theme_file_uri('/images/facebook.png') ?>" class="" alt="facebook">
+                    <a href="https://www.facebook.com/ravenscov/" target="_blank">
+                        <img src="<?php echo get_theme_file_uri('/images/facebook.svg') ?>" class="" alt="facebook">
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/channel/UCGUlqyTaZxBPs-oJGn2nxvQ">
+                    <a href="https://www.youtube.com/channel/UCGUlqyTaZxBPs-oJGn2nxvQ" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none">
                             <rect x="12" y="16" width="29.6471" height="21" rx="4" fill="white" />
                             <path d="M23.7354 30.8233V22.1763L31.1471 26.4998L23.7354 30.8233Z" fill="#19323E" />
@@ -73,8 +73,8 @@ $todaysYear = date('Y');
             </ul>
         </div>
     </div>
-    <p class="text-center text-sm mt-12 max-w-[40ch] mx-auto">
-        © Ravenswood Evangelical Covenant Church 2023. All rights reserved.
+    <p class="text-center text-sm mt-12 max-w-[40ch] md:max-w-none mx-auto">
+        © Ravenswood Evangelical Covenant Church <? echo date('Y') ?>. All rights reserved.
     </p>
 </footer>
 

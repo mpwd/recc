@@ -2,39 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --black: rgb(43 45 49);
-    --primary: rgb(22, 38, 45);
-    --secondary: rgb(229, 210, 185);
-    --opaque-secondary: rgba(229, 210, 185, 0.2);
-    --button: #2e5568;
+:root {
+  --black: rgb(43 45 49);
+  --primary: rgb(22, 38, 45);
+  --secondary: rgb(229, 210, 185);
+  --opaque-secondary: rgba(229, 210, 185, 0.2);
+  --button: #2e5568;
 
-    --green: #659b65;
-    --blue: #0e4ef1;
-    --gold: #cbb912;
-    --purple: #8906b7;
+  --green: #659b65;
+  --blue: #0e4ef1;
+  --gold: #cbb912;
+  --purple: #8906b7;
 
-    --serif: 'Lusitana', serif;
-    --sans-serif: 'Signika', sans-serif;
-    --sans-negative: 'Signika Negative', sans-serif;
+  --serif: 'Lusitana', serif;
+  --sans-serif: 'Signika', sans-serif;
+  --sans-negative: 'Signika Negative', sans-serif;
 
-    font-family: var(--sans-serif);
-    color: var(--black);
-  }
+  font-family: var(--sans-serif);
+  color: var(--black);
 }
 
 .nav-hover:hover ul {
   display: block;
 }
 
+.wp-element-button {
+  min-width: 200px !important;
+}
+
 @layer utilities {
   .slider-link a {
     color: white !important;
     border: none !important;
-    text-decoration: underline !important;
     text-underline-offset: 6px !important;
-    text-decoration-thickness: 2px !important;
+    text-decoration: underline 2px var(--secondary) !important;
   }
 
   .body-link {
@@ -48,6 +49,12 @@
     flex-grow: 999;
   }
 }
+
+.homepage-service-thumbnail iframe {
+  height: clamp(235px, 33vw, 375px);
+  width: clamp(350px, 50vw, 560px);
+}
+
 .spotlight-1 {
   margin-block: 13rem;
   background-image: linear-gradient(
@@ -56,7 +63,7 @@
     #fff 30% 100%
   );
   @media (max-width: 782px) {
-    margin-block: 4rem;
+    margin-block: 0rem;
     background-image: linear-gradient(
       180deg,
       #fff 0 30%,
@@ -75,6 +82,11 @@
     url('../images/farmers.jpeg');
   background-position: center;
   background-size: cover;
+  padding-inline: 2rem;
+  @media (max-width: 782px) {
+    margin-top: 167px;
+    padding-inline: unset;
+  }
 
   & figure {
     margin-inline: auto;
@@ -130,17 +142,38 @@
 .homepage-columns {
   margin-inline: auto;
   padding-block: 6rem;
+  padding-inline: 2rem;
+  max-width: 1200px;
   @media (max-width: 782px) {
     margin-inline: 5vw;
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    padding-inline: unset;
   }
 }
 .homepage-columns.reverse {
   @media (max-width: 782px) {
     flex-direction: column-reverse;
   }
+}
+
+.about-us-card-container {
+  display: grid !important;
+  grid-template-columns: 262px;
+  justify-content: center;
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.about-us-card {
+  background: #fff;
+  box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2rem 1rem 2rem;
 }
 
 .wrapper {
@@ -161,9 +194,17 @@
 }
 
 .staff-columns figure,
-h4,
-h5 {
-  max-width: 422px;
+.staff-columns h4,
+.staff-columns h5 {
+  max-width: 350px;
+  margin-inline: auto;
+  cursor: pointer;
+}
+
+.leadership-columns figure,
+.leadership-columns h4,
+.leadership-columns h5 {
+  max-width: 232px;
   margin-inline: auto;
 }
 

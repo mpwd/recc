@@ -6,9 +6,9 @@ get_header();
 
 <main>
     <!----------- HERO ------------>
-    <section class="bg-top" style="
+    <section class="bg-cover bg-center" style="
           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url(<? echo get_theme_file_uri('/images/event-archives.png'); ?>);
+              url(<? echo get_theme_file_uri('/images/event-archives.jpg'); ?>);
         ">
         <div class="mx-auto">
             <h1 class="text-4xl font-serif text-white py-24 lg:py-36 text-center">
@@ -27,11 +27,11 @@ get_header();
                 $meta_date = get_field('event_date');
                 $eventDate = DateTime::createFromFormat('Ymd', $meta_date);
             ?>
-                <li class="w-full md:mx-auto my-20 text-center md:text-left max-w-6xl md:flex gap-10 items-center">
-                    <div class="basis-full md:basis-96 shrink-0 bg-cover bg-center aspect-video" style="background-image: url('<? the_post_thumbnail_url() ?>');">
+                <li class="w-full md:mx-auto my-20 md:my-12 text-center md:text-left max-w-6xl md:flex gap-10 items-center">
+                    <div class="basis-full my-8 md:basis-96 shrink-0 bg-cover bg-center aspect-video" style="background-image: url('<? the_post_thumbnail_url() ?>');">
                     </div>
-                    <div>
-                        <h2 class="mb-0">
+                    <div class="flex flex-col">
+                        <h2 class="text-3xl my-0">
                             <a href="<?php echo the_permalink(); ?>" class="align-middle"><?php the_title(); ?></a>
                         </h2>
                         <p class="my-2">
@@ -45,7 +45,7 @@ get_header();
                                 <?php echo $eventDate->format('l, F jS'); ?>
                             </span>
                         </p>
-                        <p class="max-w-xs mx-auto md:max-w-none">
+                        <p class="mx-auto md:max-w-none">
                             <?php if (has_excerpt()) {
                                 echo wp_trim_words(get_the_excerpt(), 21);
                             } else {

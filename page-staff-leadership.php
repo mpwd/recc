@@ -31,7 +31,7 @@ while (have_posts()) {
                 </button>
                 <h3 class="mt-20 text-center"><? echo $value['name']; ?></h3>
                 <h5 class="mb-8 text-center"><? echo $value['role']; ?></h5>
-                <p class="my-8 px-5"><? echo $value['bio'] ?></p>
+                <p class="my-8 px-5 text-base"><? echo $value['bio'] ?></p>
                 <p class="px-5">
                     <svg class="inline mr-2" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                         <circle opacity="0.1" cx="20" cy="20" r="20" fill="#2E5568" />

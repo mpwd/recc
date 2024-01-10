@@ -11,7 +11,6 @@ while (have_posts()) {
     $serviceDate = DateTime::createFromFormat('Ymd', $meta_date);
     $serviceColor = get_field('liturgical_color');
 ?>
-    <? hero(); ?>
     <!----------- MAIN ------------>
     <main class="mx-[5vw] my-20 max-w-7xl lg:mx-auto lg:my-32">
         <h1 class="text-center"><? the_title(); ?></h1>

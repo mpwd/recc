@@ -21,17 +21,17 @@ while (have_posts()) {
         <div class="flex-grow basis-80">
             <div class="bg-opaqueSecondary p-8">
                 <div>
-                    <p class="body-link my-0">Date</p>
+                    <p class="body-link my-0 font-normal">Date</p>
                     <p class="mb-12"><? echo $fm_date; ?></p>
                 </div>
 
                 <div class="mb-12">
-                    <p class="body-link mb-4">Time</p>
+                    <p class="body-link mb-4 font-normal">Time</p>
                     <p class="inline"><?php echo $fm_time; ?></p>
                 </div>
 
                 <div class="mb-12">
-                    <p class="body-link my-0">Location</p>
+                    <p class="body-link my-0 font-normal">Location</p>
                     <p>
                         <?php echo $fm_location; ?>
                     </p>

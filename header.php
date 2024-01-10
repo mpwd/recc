@@ -49,12 +49,15 @@
 
                     <!-- OUR COMMUNITY -->
                     <div class="nav-hover cursor-pointer">
-                        <span class="pb-2">Our Community
+                        <span class="pb-2 <? if ($parentId == 61 or get_post_type() == 'event') echo 'body-link' ?>">Our Community
                             <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
                                 <path d="M8.19934 8.48782L14.6617 1.78594C14.8768 1.57336 14.8768 1.21533 14.6617 0.991557C14.4574 0.767788 14.1133 0.767788 13.8983 0.991557L8.36063 6.75361C8.36063 6.75361 8.13016 6.99366 7.82908 6.99366C7.528 6.99366 7.31292 6.75361 7.28536 6.75361L1.74773 0.991557C1.53268 0.767788 1.19934 0.767788 0.984289 0.991557C0.876762 1.10344 0.822998 1.24889 0.822998 1.38315C0.822998 1.51741 0.876762 1.67405 0.984289 1.77475L7.4359 8.48782C7.6402 8.7004 7.98429 8.7004 8.19934 8.48782Z" fill="#2B2D31" />
                             </svg>
                         </span>
-                        <ul class="hidden absolute bg-white text-center py-1 min-w-[200px]">
+                        <ul class="hidden absolute bg-white text-center z-20 py-1 min-w-[200px]">
+                            <li class="py-3">
+                                <a href="<? echo site_url('/events') ?>">Events</a>
+                            </li>
                             <?php
                             if ($our_community->have_posts()) : ?>
                                 <?php while ($our_community->have_posts()) : $our_community->the_post(); ?>
@@ -71,12 +74,12 @@
 
                     <!-- WORSHIP ARCHIVES -->
                     <div class="nav-hover cursor-pointer">
-                        <a href="<?php echo site_url('/worship-archives'); ?>">Worship Archives
+                        <a href="<?php echo site_url('/services'); ?>" class="<? if (get_post_type() == 'service') echo 'body-link' ?>">Worship Archives
                             <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
                                 <path d="M8.19934 8.48782L14.6617 1.78594C14.8768 1.57336 14.8768 1.21533 14.6617 0.991557C14.4574 0.767788 14.1133 0.767788 13.8983 0.991557L8.36063 6.75361C8.36063 6.75361 8.13016 6.99366 7.82908 6.99366C7.528 6.99366 7.31292 6.75361 7.28536 6.75361L1.74773 0.991557C1.53268 0.767788 1.19934 0.767788 0.984289 0.991557C0.876762 1.10344 0.822998 1.24889 0.822998 1.38315C0.822998 1.51741 0.876762 1.67405 0.984289 1.77475L7.4359 8.48782C7.6402 8.7004 7.98429 8.7004 8.19934 8.48782Z" fill="#2B2D31" />
                             </svg>
                         </a>
-                        <ul class="hidden absolute bg-white text-center py-1 min-w-[200px]">
+                        <ul class="hidden absolute bg-white text-center z-20 py-1 min-w-[200px]">
                             <?php
                             if ($worship_archives->have_posts()) : ?>
                                 <?php while ($worship_archives->have_posts()) : $worship_archives->the_post();
@@ -98,7 +101,7 @@
                     </a>
 
                     <!-- GIVE -->
-                    <a href="https://giving.covchurch.org/">
+                    <a class="bg-button px-10 py-2 text-white" href="https://giving.covchurch.org/" target="_blank">
                         Give
                     </a>
                 </div>
@@ -125,13 +128,16 @@
         <div class="flex flex-col items-center gap-8">
 
             <!-- ABOUT US -->
-            <a class="<? if (is_page('our-beliefs') or is_page('our-story') or is_page('our-building') or is_page('leadership')) echo 'nav-active' ?> text-3xl" href="<?php echo site_url('/about-us'); ?>">About us
+            <a class="<? if (is_page('about-us')) echo 'body-link' ?> text-3xl" href="<?php echo site_url('/about-us'); ?>">About us
             </a>
 
             <!-- OUR COMMUNITY -->
             <div>
-                <span class="text-3xl">Our Community</span>
+                <span class="text-3xl <? if ($parentId == 61 or get_post_type() == 'event') echo 'body-link' ?>">Our Community</span>
                 <ul class="text-center py-1 text-lg">
+                    <li class="py-3">
+                        <a href="<? echo site_url('/events') ?>">Events</a>
+                    </li>
                     <?php
                     if ($our_community->have_posts()) : ?>
                         <?php while ($our_community->have_posts()) : $our_community->the_post(); ?>
@@ -148,7 +154,7 @@
 
             <!-- WORSHIP ARCHIVES -->
             <div>
-                <a href="<?php echo site_url('/worship-archives'); ?>" class="text-3xl">Worship Archives</a>
+                <a href="<?php echo site_url('/services'); ?>" class="<? if (get_post_type() == 'service') echo 'body-link' ?> text-3xl">Worship Archives</a>
                 <ul class="text-center py-1 text-lg">
                     <?php
                     if ($worship_archives->have_posts()) : ?>
@@ -166,12 +172,12 @@
             </div>
 
             <!-- STAFF & LEADERSHIP -->
-            <a class="<? if (is_page('staff-leadership')) echo 'nav-active' ?> text-3xl" href="<?php echo site_url('/staff-leadership'); ?>">
+            <a class="<? if (is_page('staff-leadership')) echo 'body-link' ?> text-3xl" href="<?php echo site_url('/staff-leadership'); ?>">
                 Staff & leadership
             </a>
 
             <!-- GIVE -->
-            <a class="text-3xl" href="https://giving.covchurch.org/">
+            <a class="text-3xl" href="https://giving.covchurch.org/" target="_blank">
                 Give
             </a>
         </div>

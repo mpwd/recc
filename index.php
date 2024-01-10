@@ -1,1 +1,0 @@
-Hello there. You angel from my nightmare.
