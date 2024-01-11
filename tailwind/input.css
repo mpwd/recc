@@ -2,35 +2,228 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --black: rgb(43 45 49);
-  --primary: rgb(22, 38, 45);
-  --secondary: rgb(229, 210, 185);
-  --opaque-secondary: rgba(229, 210, 185, 0.2);
-  --button: #2e5568;
+@layer base {
+  :root {
+    --black: rgb(43 45 49);
+    --primary: rgb(22, 38, 45);
+    --secondary: rgb(229, 210, 185);
+    --opaque-secondary: rgba(229, 210, 185, 0.2);
+    --button: #2e5568;
 
-  --green: #659b65;
-  --blue: #0e4ef1;
-  --gold: #cbb912;
-  --purple: #8906b7;
+    --green: #659b65;
+    --blue: #0e4ef1;
+    --gold: #cbb912;
+    --purple: #8906b7;
 
-  --serif: 'Lusitana', serif;
-  --sans-serif: 'Signika', sans-serif;
-  --sans-negative: 'Signika Negative', sans-serif;
+    --serif: 'Lusitana', serif;
+    --sans-serif: 'Signika', sans-serif;
+    --sans-negative: 'Signika Negative', sans-serif;
 
-  font-family: var(--sans-serif);
-  color: var(--black);
+    font-family: var(--sans-serif);
+    color: var(--black);
+  }
+
+  h1 {
+    font-size: 3.75rem;
+    font-family: var(--serif);
+    @media (max-width: 782px) {
+      font-size: 2.25rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    margin-block-end: 2.5rem;
+    @media (max-width: 782px) {
+      font-size: 1.5rem;
+      margin-block-end: 1.5rem;
+    }
+  }
+
+  h3 {
+    font-family: var(--serif);
+    font-size: 1.875rem;
+  }
+
+  h4 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    margin-block: 1rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-weight: 300;
+    line-height: 145%;
+    font-size: 1.25rem;
+    margin-block: 1rem;
+  }
 }
 
-.nav-hover:hover ul {
-  display: block;
-}
+@layer components {
+  .homepage-service-thumbnail iframe {
+    height: clamp(235px, 33vw, 375px);
+    width: clamp(350px, 50vw, 560px);
+  }
 
-.wp-element-button {
-  min-width: 200px !important;
+  .spotlight-1 {
+    margin-block: 13rem;
+    background-image: linear-gradient(
+      90deg,
+      var(--opaque-secondary) 0 70%,
+      #fff 30% 100%
+    );
+    @media (max-width: 782px) {
+      margin-block: 0rem;
+      background-image: linear-gradient(
+        180deg,
+        #fff 0 30%,
+        var(--opaque-secondary) 30% 100%
+      );
+    }
+  }
+
+  .farmers-market {
+    color: white;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.85) 0.09%,
+        rgba(0, 0, 0, 0) 99.9%
+      ),
+      url('../images/farmers.jpeg');
+    background-position: center;
+    background-size: cover;
+    padding-inline: 2rem;
+    @media (max-width: 782px) {
+      margin-top: 167px;
+      padding-inline: unset;
+    }
+
+    & figure {
+      margin-inline: auto;
+      padding: 2rem;
+      box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.1);
+      @media (min-width: 782px) {
+        transform: translate(0, 10rem);
+      }
+    }
+  }
+
+  .spotlight-2 {
+    margin-block: 13rem;
+    background-image: linear-gradient(
+      90deg,
+      #fff 0 30%,
+      var(--opaque-secondary) 30% 100%
+    );
+    @media (max-width: 782px) {
+      margin-block: 4rem;
+      background-image: linear-gradient(
+        180deg,
+        #fff 0 30%,
+        var(--opaque-secondary) 30% 100%
+      );
+    }
+  }
+
+  .other-churches {
+    max-width: 1240px;
+    margin-inline: auto;
+    @media (max-width: 782px) {
+      margin-block: 4rem;
+      margin-inline: 5vw;
+    }
+  }
+
+  .homepage-columns {
+    margin-inline: auto;
+    padding-block: 6rem;
+    padding-inline: 2rem;
+    max-width: 1200px;
+    @media (max-width: 782px) {
+      margin-inline: 5vw;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding-inline: unset;
+    }
+  }
+  .homepage-columns.reverse {
+    @media (max-width: 782px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .about-us-card-container {
+    display: grid !important;
+    grid-template-columns: 262px;
+    justify-content: center;
+    @media (min-width: 600px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .about-us-card {
+    background: #fff;
+    box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.1);
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  .wrapper {
+    position: relative;
+    padding-bottom: 46.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    max-width: 743px;
+    margin-inline: auto;
+  }
+
+  .wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .staff-columns figure,
+  .staff-columns h4,
+  .staff-columns h5 {
+    max-width: 350px;
+    margin-inline: auto;
+    cursor: pointer;
+  }
+
+  .leadership-columns figure,
+  .leadership-columns h4,
+  .leadership-columns h5 {
+    max-width: 232px;
+    margin-inline: auto;
+  }
+
+  .staff-info {
+    display: grid;
+    grid-template-columns: 1fr 50px 40px;
+    margin-bottom: 0;
+  }
+
+  .staff-info a > img {
+    display: inline;
+  }
 }
 
 @layer utilities {
+  .nav-hover:hover ul {
+    display: block;
+  }
+
   .slider-link a {
     color: white !important;
     border: none !important;
@@ -48,226 +241,37 @@
   .flex-grow-lg {
     flex-grow: 999;
   }
-}
 
-.homepage-service-thumbnail iframe {
-  height: clamp(235px, 33vw, 375px);
-  width: clamp(350px, 50vw, 560px);
-}
-
-.spotlight-1 {
-  margin-block: 13rem;
-  background-image: linear-gradient(
-    90deg,
-    var(--opaque-secondary) 0 70%,
-    #fff 30% 100%
-  );
-  @media (max-width: 782px) {
-    margin-block: 0rem;
-    background-image: linear-gradient(
-      180deg,
-      #fff 0 30%,
-      var(--opaque-secondary) 30% 100%
-    );
-  }
-}
-
-.farmers-market {
-  color: white;
-  background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.85) 0.09%,
-      rgba(0, 0, 0, 0) 99.9%
-    ),
-    url('../images/farmers.jpeg');
-  background-position: center;
-  background-size: cover;
-  padding-inline: 2rem;
-  @media (max-width: 782px) {
-    margin-top: 167px;
-    padding-inline: unset;
+  .wp-element-button {
+    min-width: 200px !important;
   }
 
-  & figure {
-    margin-inline: auto;
-    padding: 2rem;
-    box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.1);
-    @media (min-width: 782px) {
-      transform: translate(0, 10rem);
-    }
+  .date-icon-dark::before,
+  .date-icon-light::before {
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    margin-right: 1rem;
+    vertical-align: text-top;
   }
-}
-
-.spotlight-2 {
-  margin-block: 13rem;
-  background-image: linear-gradient(
-    90deg,
-    #fff 0 30%,
-    var(--opaque-secondary) 30% 100%
-  );
-  @media (max-width: 782px) {
-    margin-block: 4rem;
-    background-image: linear-gradient(
-      180deg,
-      #fff 0 30%,
-      var(--opaque-secondary) 30% 100%
-    );
+  .date-icon-light::before {
+    content: url('../images/date-icon-light.svg');
   }
-}
-
-.other-churches {
-  max-width: 1240px;
-  margin-inline: auto;
-  @media (max-width: 782px) {
-    margin-block: 4rem;
-    margin-inline: 5vw;
+  .date-icon-dark::before {
+    content: url('../images/date-icon-dark.svg');
   }
-}
 
-.date-icon-dark::before,
-.date-icon-light::before {
-  display: inline-block;
-  width: 20px;
-  height: 18px;
-  margin-right: 1rem;
-  vertical-align: text-top;
-}
-.date-icon-light::before {
-  content: url('../images/date-icon-light.svg');
-}
-.date-icon-dark::before {
-  content: url('../images/date-icon-dark.svg');
-}
-
-.homepage-columns {
-  margin-inline: auto;
-  padding-block: 6rem;
-  padding-inline: 2rem;
-  max-width: 1200px;
-  @media (max-width: 782px) {
-    margin-inline: 5vw;
-    justify-content: center;
+  .page-numbers {
+    border-bottom: solid 2px transparent;
+    flex-basis: 2rem;
     text-align: center;
-    flex-direction: column;
-    padding-inline: unset;
   }
-}
-.homepage-columns.reverse {
-  @media (max-width: 782px) {
-    flex-direction: column-reverse;
+
+  .page-numbers.current {
+    border-bottom: solid 2px var(--secondary);
   }
-}
 
-.about-us-card-container {
-  display: grid !important;
-  grid-template-columns: 262px;
-  justify-content: center;
-  @media (min-width: 600px) {
-    grid-template-columns: 1fr 1fr;
+  .modal::backdrop {
+    background: rgba(0, 0, 0, 0.3);
   }
-  @media (min-width: 1000px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-.about-us-card {
-  background: #fff;
-  box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.1);
-  padding: 2rem 2rem 1rem 2rem;
-}
-
-.wrapper {
-  position: relative;
-  padding-bottom: 46.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  max-width: 743px;
-  margin-inline: auto;
-}
-
-.wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.staff-columns figure,
-.staff-columns h4,
-.staff-columns h5 {
-  max-width: 350px;
-  margin-inline: auto;
-  cursor: pointer;
-}
-
-.leadership-columns figure,
-.leadership-columns h4,
-.leadership-columns h5 {
-  max-width: 232px;
-  margin-inline: auto;
-}
-
-.staff-info {
-  display: grid;
-  grid-template-columns: 1fr 50px 40px;
-  margin-bottom: 0;
-}
-
-.staff-info a > img {
-  display: inline;
-}
-
-h1 {
-  font-size: 3.75rem;
-  font-family: var(--serif);
-  @media (max-width: 782px) {
-    font-size: 2.25rem;
-  }
-}
-
-h2 {
-  font-size: 1.875rem;
-  margin-block-end: 2.5rem;
-  @media (max-width: 782px) {
-    font-size: 1.5rem;
-    margin-block-end: 1.5rem;
-  }
-}
-
-h3 {
-  font-family: var(--serif);
-  font-size: 1.875rem;
-}
-
-h4 {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  margin-block: 1rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-}
-
-p {
-  font-weight: 300;
-  line-height: 145%;
-  font-size: 1.25rem;
-  margin-block: 1rem;
-}
-
-.page-numbers {
-  border-bottom: solid 2px transparent;
-  flex-basis: 2rem;
-  text-align: center;
-}
-
-.page-numbers.current {
-  border-bottom: solid 2px var(--secondary);
-}
-
-.modal::backdrop {
-  background: rgba(0, 0, 0, 0.3);
 }
