@@ -1294,9 +1294,11 @@ p {
 }
 
 .body-link {
-  -webkit-text-decoration: underline 2px var(--secondary) !important;
-          text-decoration: underline 2px var(--secondary) !important;
-  text-underline-offset: 6px;
+  text-decoration-line: underline !important;
+  text-decoration-style: solid !important;
+  text-decoration-color: rgb(229, 210, 185) !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 6px !important;
   color: unset;
   background-color: transparent;
 }
@@ -1479,9 +1481,11 @@ p {
 }
 
 .\[\&_a\]\:body-link a {
-  -webkit-text-decoration: underline 2px var(--secondary) !important;
-          text-decoration: underline 2px var(--secondary) !important;
-  text-underline-offset: 6px;
+  text-decoration-line: underline !important;
+  text-decoration-style: solid !important;
+  text-decoration-color: rgb(229, 210, 185) !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 6px !important;
   color: unset;
   background-color: transparent;
 }
