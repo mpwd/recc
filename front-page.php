@@ -104,7 +104,7 @@
                     </p>
                     <div class="flex flex-col md:flex-row items-center gap-6">
                         <a class="text-xl text-white bg-button py-4 px-10" href="<?php echo $bulletinLink ?>" target="_blank">View bulletin</a>
-                        <a class="text-xl body-link" href="<?php echo $bulletinLink ?>" target="_blank">View worship archives!</a>
+                        <a class="text-xl body-link" href="<?php echo $bulletinLink ?>" target="_blank">View worship archives</a>
                     </div>
                 </div>
             </section>

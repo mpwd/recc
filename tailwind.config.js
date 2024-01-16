@@ -42,6 +42,7 @@ module.exports = {
     '[&_a]:bg-button',
     '[&_a]:body-link',
     'wp-element-button',
+    'sticky-video',
   ],
   theme: {
     extend: {
