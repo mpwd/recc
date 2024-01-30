@@ -450,9 +450,9 @@ video {
   --blue: #0e4ef1;
   --gold: #cbb912;
   --purple: #8906b7;
-  --serif: 'Lusitana', serif;
-  --sans-serif: 'Signika', sans-serif;
-  --sans-negative: 'Signika Negative', sans-serif;
+  --serif: "Lusitana", serif;
+  --sans-serif: "Signika", sans-serif;
+  --sans-negative: "Signika Negative", sans-serif;
   font-family: var(--sans-serif);
   color: var(--black);
 }
@@ -609,30 +609,24 @@ iframe {
 
 .spotlight-1 {
   margin-block: 13rem;
-  background-image: linear-gradient(
-      90deg,
-      var(--opaque-secondary) 0 70%,
-      #fff 30% 100%
-    );
+  background-image: linear-gradient(90deg,
+        var(--opaque-secondary) 0 70%,
+        #fff 30% 100%);
   @media (max-width: 782px) {
     margin-block: 0rem;
 
-    background-image: linear-gradient(
-        180deg,
-        #fff 0 30%,
-        var(--opaque-secondary) 30% 100%
-      );
+    background-image: linear-gradient(180deg,
+          #fff 0 30%,
+          var(--opaque-secondary) 30% 100%);
   }
 }
 
 .farmers-market {
   color: white;
-  background: linear-gradient(
-        90deg,
+  background: linear-gradient(90deg,
         rgba(0, 0, 0, 0.85) 0.09%,
-        rgba(0, 0, 0, 0) 99.9%
-      ),
-      url('../images/farmers.jpeg');
+        rgba(0, 0, 0, 0) 99.9%),
+      url("../images/farmers.jpeg");
   background-position: center;
   background-size: cover;
   padding-inline: 2rem;
@@ -653,19 +647,15 @@ iframe {
 
 .spotlight-2 {
   margin-block: 13rem;
-  background-image: linear-gradient(
-      90deg,
-      #fff 0 30%,
-      var(--opaque-secondary) 30% 100%
-    );
+  background-image: linear-gradient(90deg,
+        #fff 0 30%,
+        var(--opaque-secondary) 30% 100%);
   @media (max-width: 782px) {
     margin-block: 4rem;
 
-    background-image: linear-gradient(
-        180deg,
-        #fff 0 30%,
-        var(--opaque-secondary) 30% 100%
-      );
+    background-image: linear-gradient(180deg,
+          #fff 0 30%,
+          var(--opaque-secondary) 30% 100%);
   }
 }
 
@@ -712,6 +702,29 @@ iframe {
 /* .sticky-video iframe {
     margin-inline: auto;
   } */
+
+.card-address {
+  margin-block: 2.5rem;
+}
+
+.letters-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(229, 210, 185, 0.2);
+  padding: 1rem 0.5rem;
+  border-radius: 100px;
+  @media (max-width: 450px) {
+    padding: 0;
+
+    font-size: 0.75rem;
+  }
+}
+
+.active-letter {
+  background-color: var(--secondary);
+  border-radius: 999px;
+}
 
 .fixed {
   position: fixed;
@@ -807,6 +820,11 @@ iframe {
   margin-bottom: 5rem;
 }
 
+.my-28 {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -820,6 +838,11 @@ iframe {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .mb-0 {
@@ -1047,6 +1070,10 @@ iframe {
   flex-wrap: wrap-reverse;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
@@ -1089,6 +1116,14 @@ iframe {
 
 .gap-\[6\%\] {
   gap: 6%;
+}
+
+.gap-0 {
+  gap: 0px;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .overflow-x-auto {
@@ -1159,6 +1194,11 @@ iframe {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-4 {
@@ -1278,6 +1318,11 @@ iframe {
   line-height: 1.25;
 }
 
+.text-\[\#444\] {
+  --tw-text-opacity: 1;
+  color: rgb(68 68 68 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1329,11 +1374,11 @@ iframe {
 }
 
 .date-icon-light::before {
-  content: url('../images/date-icon-light.svg');
+  content: url("../images/date-icon-light.svg");
 }
 
 .date-icon-dark::before {
-  content: url('../images/date-icon-dark.svg');
+  content: url("../images/date-icon-dark.svg");
 }
 
 .page-numbers.current {
@@ -1354,6 +1399,20 @@ iframe {
   .sm\:max-w-xl {
     max-width: 36rem;
   }
+
+  .sm\:gap-8 {
+    gap: 2rem;
+  }
+
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sm\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1365,6 +1424,11 @@ iframe {
   .md\:my-12 {
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+
+  .md\:my-28 {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
   }
 
   .md\:mt-40 {
@@ -1549,6 +1613,15 @@ iframe {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+}
+
+.\[\&_span\]\:text-xl span {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.\[\&_span\]\:font-light span {
+  font-weight: 300;
 }
 
 .\[\&_ul\]\:ml-8 ul {

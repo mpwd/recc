@@ -43,6 +43,9 @@ module.exports = {
     '[&_a]:body-link',
     'wp-element-button',
     'sticky-video',
+    'persons-container',
+    'card-address',
+    'letters-column',
   ],
   theme: {
     extend: {

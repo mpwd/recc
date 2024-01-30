@@ -15,9 +15,9 @@
     --gold: #cbb912;
     --purple: #8906b7;
 
-    --serif: 'Lusitana', serif;
-    --sans-serif: 'Signika', sans-serif;
-    --sans-negative: 'Signika Negative', sans-serif;
+    --serif: "Lusitana", serif;
+    --sans-serif: "Signika", sans-serif;
+    --sans-negative: "Signika Negative", sans-serif;
 
     font-family: var(--sans-serif);
     color: var(--black);
@@ -26,6 +26,7 @@
   h1 {
     font-size: 3.75rem;
     font-family: var(--serif);
+
     @media (max-width: 782px) {
       font-size: 2.25rem;
     }
@@ -34,6 +35,7 @@
   h2 {
     font-size: 1.875rem;
     margin-block-end: 2.5rem;
+
     @media (max-width: 782px) {
       font-size: 1.5rem;
       margin-block-end: 1.5rem;
@@ -76,32 +78,28 @@
 
   .spotlight-1 {
     margin-block: 13rem;
-    background-image: linear-gradient(
-      90deg,
-      var(--opaque-secondary) 0 70%,
-      #fff 30% 100%
-    );
+    background-image: linear-gradient(90deg,
+        var(--opaque-secondary) 0 70%,
+        #fff 30% 100%);
+
     @media (max-width: 782px) {
       margin-block: 0rem;
-      background-image: linear-gradient(
-        180deg,
-        #fff 0 30%,
-        var(--opaque-secondary) 30% 100%
-      );
+      background-image: linear-gradient(180deg,
+          #fff 0 30%,
+          var(--opaque-secondary) 30% 100%);
     }
   }
 
   .farmers-market {
     color: white;
-    background: linear-gradient(
-        90deg,
+    background: linear-gradient(90deg,
         rgba(0, 0, 0, 0.85) 0.09%,
-        rgba(0, 0, 0, 0) 99.9%
-      ),
-      url('../images/farmers.jpeg');
+        rgba(0, 0, 0, 0) 99.9%),
+      url("../images/farmers.jpeg");
     background-position: center;
     background-size: cover;
     padding-inline: 2rem;
+
     @media (max-width: 782px) {
       margin-top: 167px;
       padding-inline: unset;
@@ -111,6 +109,7 @@
       margin-inline: auto;
       padding: 2rem;
       box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.1);
+
       @media (min-width: 782px) {
         transform: translate(0, 10rem);
       }
@@ -119,24 +118,22 @@
 
   .spotlight-2 {
     margin-block: 13rem;
-    background-image: linear-gradient(
-      90deg,
-      #fff 0 30%,
-      var(--opaque-secondary) 30% 100%
-    );
+    background-image: linear-gradient(90deg,
+        #fff 0 30%,
+        var(--opaque-secondary) 30% 100%);
+
     @media (max-width: 782px) {
       margin-block: 4rem;
-      background-image: linear-gradient(
-        180deg,
-        #fff 0 30%,
-        var(--opaque-secondary) 30% 100%
-      );
+      background-image: linear-gradient(180deg,
+          #fff 0 30%,
+          var(--opaque-secondary) 30% 100%);
     }
   }
 
   .other-churches {
     max-width: 1240px;
     margin-inline: auto;
+
     @media (max-width: 782px) {
       margin-block: 4rem;
       margin-inline: 5vw;
@@ -148,6 +145,7 @@
     padding-block: 6rem;
     padding-inline: 2rem;
     max-width: 1200px;
+
     @media (max-width: 782px) {
       margin-inline: 5vw;
       justify-content: center;
@@ -156,6 +154,7 @@
       padding-inline: unset;
     }
   }
+
   .homepage-columns.reverse {
     @media (max-width: 782px) {
       flex-direction: column-reverse;
@@ -166,9 +165,11 @@
     display: grid !important;
     grid-template-columns: 262px;
     justify-content: center;
+
     @media (min-width: 600px) {
       grid-template-columns: 1fr 1fr;
     }
+
     @media (min-width: 1000px) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -182,7 +183,8 @@
 
   .wrapper {
     position: relative;
-    padding-bottom: 46.25%; /* 16:9 */
+    padding-bottom: 46.25%;
+    /* 16:9 */
     padding-top: 25px;
     height: 0;
     max-width: 743px;
@@ -222,8 +224,31 @@
     margin-bottom: 0;
   }
 
-  .staff-info a > img {
+  .staff-info a>img {
     display: inline;
+  }
+
+  .card-address {
+    margin-block: 2.5rem;
+  }
+
+  .letters-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(229, 210, 185, 0.2);
+    padding: 1rem 0.5rem;
+    border-radius: 100px;
+
+    @media (max-width: 450px) {
+      padding: 0;
+      font-size: 0.75rem;
+    }
+  }
+
+  .active-letter {
+    background-color: var(--secondary);
+    border-radius: 999px;
   }
 }
 
@@ -265,11 +290,13 @@
     margin-right: 1rem;
     vertical-align: text-top;
   }
+
   .date-icon-light::before {
-    content: url('../images/date-icon-light.svg');
+    content: url("../images/date-icon-light.svg");
   }
+
   .date-icon-dark::before {
-    content: url('../images/date-icon-dark.svg');
+    content: url("../images/date-icon-dark.svg");
   }
 
   .page-numbers {
