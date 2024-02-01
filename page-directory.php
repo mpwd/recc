@@ -9,7 +9,15 @@ get_header();
   <h1 class="text-center my-12 md:my-28">Church directory</h1>
   <?
 
-$post_password = get_post_field('post_password', 417);
+  // recc.local = 417
+  // dev = 415
+  if (esc_url(site_url()) == 'https://dev.ravenscov.org') {
+  $post_id = 415;
+  } elseif (esc_url(site_url()) == 'http://recc.local') {
+  $post_id = 417;
+  }
+
+$post_password = get_post_field('post_password', $post_id);
 
 if (!empty($post_password)) {
   // If a password is set, check if it's correct
@@ -77,7 +85,7 @@ if (!empty($post_password)) {
     <form action="<?esc_url(site_url('directory'))?>" method="post">
       <label class="block " for="post_password">Password</label>
       <input class="block border border-black w-full py-2 px-2" type="password" name="post_password" id="post_password" />
-      <button class="block w-full py-2 bg-opaqueBlack text-white mt-6" type="submit">Continue</button>
+      <button class="block w-full py-2 bg-button text-white mt-6" type="submit">Continue</button>
     </form>
   </div>
   <?
