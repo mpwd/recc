@@ -219,6 +219,14 @@
     margin-inline: auto;
   }
 
+  .staff-columns {
+    justify-content: center;
+  }
+
+  .staff-column {
+    max-width: 422px;
+  }
+
   .staff-info {
     display: grid;
     grid-template-columns: 1fr 50px 40px;

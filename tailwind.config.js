@@ -34,6 +34,8 @@ module.exports = {
     "other-churches",
     "homepage-columns",
     "staff-pic",
+    "staff-info",
+    "staff-columns",
     "w-40",
     "max-w-[20ch]",
     "max-[782px]:justify-center",
