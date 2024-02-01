@@ -442,6 +442,7 @@ video {
 
 :root {
   --black: rgb(43 45 49);
+  --opaque-black: rgb(43, 45, 49, 0.4);
   --primary: rgb(22, 38, 45);
   --secondary: rgb(229, 210, 185);
   --opaque-secondary: rgba(229, 210, 185, 0.2);
@@ -810,6 +811,11 @@ iframe {
   margin-bottom: 0px;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -818,11 +824,6 @@ iframe {
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
-}
-
-.my-28 {
-  margin-top: 7rem;
-  margin-bottom: 7rem;
 }
 
 .my-4 {
@@ -840,11 +841,6 @@ iframe {
   margin-bottom: 2rem;
 }
 
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -859,6 +855,10 @@ iframe {
 
 .mb-20 {
   margin-bottom: 5rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .mb-4 {
@@ -895,6 +895,10 @@ iframe {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .block {
@@ -983,6 +987,10 @@ iframe {
 
 .max-w-\[259px\] {
   max-width: 259px;
+}
+
+.max-w-\[350px\] {
+  max-width: 350px;
 }
 
 .max-w-\[40ch\] {
@@ -1098,6 +1106,10 @@ iframe {
   gap: 0.5rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -1118,14 +1130,6 @@ iframe {
   gap: 6%;
 }
 
-.gap-0 {
-  gap: 0px;
-}
-
-.gap-1 {
-  gap: 0.25rem;
-}
-
 .overflow-x-auto {
   overflow-x: auto;
 }
@@ -1138,6 +1142,10 @@ iframe {
   border-radius: 9999px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -1146,8 +1154,17 @@ iframe {
   border-style: none;
 }
 
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .bg-button {
   background-color: var(--button);
+}
+
+.bg-opaqueBlack {
+  background-color: var(--opaque-black);
 }
 
 .bg-opaqueSecondary {
@@ -1258,6 +1275,10 @@ iframe {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
 }
 
 .pb-7 {
@@ -1396,6 +1417,11 @@ iframe {
 }
 
 @media (min-width: 640px) {
+  .sm\:my-\[-3rem\] {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+  }
+
   .sm\:max-w-xl {
     max-width: 36rem;
   }

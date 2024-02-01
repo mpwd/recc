@@ -5,6 +5,7 @@
 @layer base {
   :root {
     --black: rgb(43 45 49);
+    --opaque-black: rgb(43, 45, 49, 0.4);
     --primary: rgb(22, 38, 45);
     --secondary: rgb(229, 210, 185);
     --opaque-secondary: rgba(229, 210, 185, 0.2);

@@ -5,11 +5,19 @@
 get_header();
 
 ?>
-
-<main class="mx-[5vw] lg:mx-auto">
+<main class="mx-[5vw] xl:mx-auto">
   <h1 class="text-center my-12 md:my-28">Church directory</h1>
-  <section class="flex items-start justify-center gap-1 sm:gap-8">
-    <div class="letters-column">
+  <?
+
+$post_password = get_post_field('post_password', 417);
+
+if (!empty($post_password)) {
+  // If a password is set, check if it's correct
+  if (isset($_POST['post_password']) && $_POST['post_password'] === $post_password) {
+    // Correct password, display the_content
+  ?>
+  <section class="flex items-start justify-center gap-3 sm:gap-8">
+    <div class="letters-column mt-20">
       <a href="#A" id="sidebar-#A" class="block py-1 px-2 sm:py-2 sm:px-4 active-letter">A</a>
       <a href="#B" id="sidebar-#B" class="block py-1 px-2 sm:py-2 sm:px-4">B</a>
       <a href="#C" id="sidebar-#C" class="block py-1 px-2 sm:py-2 sm:px-4">C</a>
@@ -50,9 +58,9 @@ get_header();
       if ($loop->have_posts()) :
         while ($loop->have_posts()) : $loop->the_post();
       ?>
-          <div class="max-w-6xl mx-auto [&_span]:text-xl [&_span]:font-light text-[#444]" data-first-character="<?php echo mb_substr(get_field('last_name'), 0, 1); ?>">
-            <? echo the_content(); ?>
-          </div>
+      <div class="max-w-6xl mx-auto [&_span]:text-xl [&_span]:font-light text-[#444]" data-first-character="<?php echo mb_substr(get_field('last_name'), 0, 1); ?>">
+        <? echo the_content(); ?>
+      </div>
       <?
         endwhile;
       endif;
@@ -60,6 +68,23 @@ get_header();
       ?>
     </div>
   </section>
+  <?
+  } else {
+    // Incorrect password or no password entered, display password form
+  ?>
+  <div class="mx-auto sm:my-[-3rem] mb-24 pb-20 max-w-[350px]">
+    <p>Please enter in a password to access the church directory.</p>
+    <form action="<?esc_url(site_url('directory'))?>" method="post">
+      <label class="block " for="post_password">Password</label>
+      <input class="block border border-black w-full py-2 px-2" type="password" name="post_password" id="post_password" />
+      <button class="block w-full py-2 bg-opaqueBlack text-white mt-6" type="submit">Continue</button>
+    </form>
+  </div>
+  <?
+  }
+  }
+  ?>
 </main>
 
-<? get_footer();
+<?
+get_footer();
