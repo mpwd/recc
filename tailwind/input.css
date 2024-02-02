@@ -266,6 +266,10 @@
     display: block;
   }
 
+  .nav-shadow {
+    box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.1);
+  }
+
   .slider-link a {
     color: white !important;
     border: none !important;
