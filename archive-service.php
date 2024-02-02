@@ -56,7 +56,7 @@ get_header();
                             <?php if (has_excerpt()) {
                                 echo wp_trim_words(get_the_excerpt(), 21);
                             } else {
-                                echo wp_trim_words(get_the_content(), 21);
+                                echo 'Worship live on Sundays in person at 11:00 am, or on YouTube at noon.';
                             }  ?>
                         </p>
                         <a class="text-xl body-link" href="<?php echo $bulletinLink ?>" target="_blank">View bulletin</a>

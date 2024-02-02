@@ -99,7 +99,7 @@
                         <?php if (has_excerpt()) {
                             echo wp_trim_words(get_the_excerpt(), 24);
                         } else {
-                            echo wp_trim_words(get_the_content(), 24);
+                            echo 'Worship live on Sundays in person at 11:00 am, or on YouTube at noon.';
                         }  ?>
                     </p>
                     <div class="flex flex-col md:flex-row items-center gap-6">
