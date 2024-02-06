@@ -177,7 +177,7 @@
             </a>
 
             <!-- GIVE -->
-            <a class="text-3xl" href="https://giving.covchurch.org/" target="_blank">
+            <a class="text-3xl" href="https://www.covchurchgiving.com/p-408-give-to-ravenswood-evangelical-covenant-church.aspx" target="_blank">
                 Give
             </a>
         </div>
