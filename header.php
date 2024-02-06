@@ -101,7 +101,7 @@
                     </a>
 
                     <!-- GIVE -->
-                    <a class="bg-button px-10 py-2 text-white" href="https://giving.covchurch.org/" target="_blank">
+                    <a class="bg-button px-10 py-2 text-white" href="https://www.covchurchgiving.com/p-408-give-to-ravenswood-evangelical-covenant-church.aspx" target="_blank">
                         Give
                     </a>
                 </div>
