@@ -3,6 +3,10 @@ module.exports = {
   content: ["./*.{html,js,php}"],
   safelist: [
     "absolute",
+    "top-5",
+    "right-0",
+    "text-button",
+    "bg-opaqueButton",
     "body-link",
     "cursor-pointer",
     "flex",
@@ -20,7 +24,11 @@ module.exports = {
     "mb-4",
     "mb-12",
     "pt-4",
+    "py-1",
     "py-4",
+    "py-8",
+    "px-4",
+    "font-medium",
     "about-us-card",
     "bg-transparent",
     "bg-secondary",
@@ -48,6 +56,9 @@ module.exports = {
     "persons-container",
     "card-address",
     "letters-column",
+    "card-box-shadow",
+    "border-2",
+    "border-button",
   ],
   theme: {
     extend: {
@@ -57,6 +68,7 @@ module.exports = {
         secondary: "var(--secondary)",
         opaqueSecondary: "var(--opaque-secondary)",
         button: "var(--button)",
+        opaqueButton: "var(--opaque-button)",
       },
     },
     fontFamily: {

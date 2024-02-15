@@ -10,6 +10,7 @@
     --secondary: rgb(229, 210, 185);
     --opaque-secondary: rgba(229, 210, 185, 0.2);
     --button: #2e5568;
+    --opaque-button: rgba(46, 85, 104, 0.1);
 
     --green: #659b65;
     --blue: #0e4ef1;
@@ -258,6 +259,16 @@
   .active-letter {
     background-color: var(--secondary);
     border-radius: 999px;
+  }
+
+  .background__clip {
+    background: linear-gradient(172deg,
+        #fff 0 50%,
+        rgba(86, 126, 168, 0.1) 50% 100%);
+  }
+
+  .card-box-shadow {
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.05);
   }
 }
 

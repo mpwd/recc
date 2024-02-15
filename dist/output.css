@@ -447,6 +447,7 @@ video {
   --secondary: rgb(229, 210, 185);
   --opaque-secondary: rgba(229, 210, 185, 0.2);
   --button: #2e5568;
+  --opaque-button: rgba(46, 85, 104, 0.1);
   --green: #659b65;
   --blue: #0e4ef1;
   --gold: #cbb912;
@@ -753,6 +754,16 @@ iframe {
   border-radius: 999px;
 }
 
+.background__clip {
+  background: linear-gradient(172deg,
+        #fff 0 50%,
+        rgba(86, 126, 168, 0.1) 50% 100%);
+}
+
+.card-box-shadow {
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.05);
+}
+
 .fixed {
   position: fixed;
 }
@@ -771,6 +782,10 @@ iframe {
 
 .left-4 {
   left: 1rem;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .right-1\/2 {
@@ -799,6 +814,10 @@ iframe {
 
 .top-1\/2 {
   top: 50%;
+}
+
+.top-5 {
+  top: 1.25rem;
 }
 
 .top-6 {
@@ -1185,8 +1204,16 @@ iframe {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.border-button {
+  border-color: var(--button);
+}
+
 .bg-button {
   background-color: var(--button);
+}
+
+.bg-opaqueButton {
+  background-color: var(--opaque-button);
 }
 
 .bg-opaqueSecondary {
@@ -1275,6 +1302,11 @@ iframe {
   padding-bottom: 0.5rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -1353,6 +1385,10 @@ iframe {
   line-height: 1.75rem;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .font-normal {
   font-weight: 400;
 }
@@ -1364,6 +1400,10 @@ iframe {
 .text-\[\#444\] {
   --tw-text-opacity: 1;
   color: rgb(68 68 68 / var(--tw-text-opacity));
+}
+
+.text-button {
+  color: var(--button);
 }
 
 .text-white {
@@ -1563,6 +1603,11 @@ iframe {
 
   .lg\:w-16 {
     width: 4rem;
+  }
+
+  .lg\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   .lg\:py-36 {
