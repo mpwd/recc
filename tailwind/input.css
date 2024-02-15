@@ -217,6 +217,10 @@
     justify-content: center;
   }
 
+  .leadership-columns>.wp-block-column {
+    max-width: 271px;
+  }
+
   .leadership-columns figure {
     overflow: hidden;
     display: flex;
@@ -232,7 +236,6 @@
 
   .leadership-columns h4,
   .leadership-columns h5 {
-    max-width: 232px;
     margin-inline: auto;
   }
 
