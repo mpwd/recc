@@ -44,6 +44,7 @@ module.exports = {
     "staff-pic",
     "staff-info",
     "staff-columns",
+    "leadership-columns",
     "w-40",
     "max-w-[20ch]",
     "max-[782px]:justify-center",

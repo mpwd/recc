@@ -713,6 +713,30 @@ iframe {
   cursor: pointer;
 }
 
+.leadership-columns {
+  justify-content: center;
+}
+
+.leadership-columns figure {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 3/4;
+}
+
+.leadership-columns img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.leadership-columns h4,
+  .leadership-columns h5 {
+  max-width: 232px;
+  margin-inline: auto;
+}
+
 .staff-columns {
   justify-content: center;
 }
