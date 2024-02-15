@@ -213,7 +213,23 @@
     cursor: pointer;
   }
 
-  .leadership-columns figure,
+  .leadership-columns {
+    justify-content: center;
+  }
+
+  .leadership-columns figure {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 3/4;
+  }
+
+  .leadership-columns img {
+    width: 100%;
+    object-fit: cover;
+  }
+
   .leadership-columns h4,
   .leadership-columns h5 {
     max-width: 232px;
