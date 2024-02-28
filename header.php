@@ -40,7 +40,7 @@
       </a>
 
       <!----------- NAV (DESKTOP) ------------>
-      <nav class="hidden lg:flex items-center text-center">
+      <nav class="hidden xl:flex items-center text-center">
         <div class="flex items-center gap-8">
 
           <!-- ABOUT US -->
@@ -108,7 +108,7 @@
       </nav>
 
       <!-- HAMBURGER (FOR MOBILE NAV) -->
-      <svg class="lg:hidden" id="hamburger" width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="xl:hidden" id="hamburger" width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Group 52">
           <rect id="Rectangle 21" width="25" height="2" fill="#2B2D31" />
           <rect id="Rectangle 22" y="7" width="25" height="2" fill="#2B2D31" />
